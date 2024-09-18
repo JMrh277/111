@@ -1,0 +1,238 @@
+body{
+    overflow: hidden;
+    --DefualtHeroColor: #ffcd00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    user-select: none;
+}
+
+.login {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    color: white;
+    align-items: center;
+    width: 60vh;
+    height: 60vh;
+    text-shadow: 2px 1px 1px black;
+    animation: slide-in-blurred-right 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.login-img {
+    position: absolute;
+    width: 100%;
+}
+
+.background-login {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10vh;
+    margin-bottom: 5vh;
+    gap: 2vh;
+}
+
+.login-text {
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.login-id {
+    font-size: 1.5vh;
+    font-weight: 600;
+}
+
+.container{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-shadow: 2px 1px 1px black;
+}
+
+.main {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vh;
+    top: 60%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    display: flex;
+    width: 75%;
+    height: 2vh;
+    align-items: center;
+    top: -0.5vh;
+    position: relative;
+    justify-content: center;
+    background: transparent;
+}
+
+.left {
+    width: 85%;
+}
+
+.mid {
+    width: 22vh;
+    height: 8vh;
+    max-width: 32vh;
+    max-height: 8vh;
+    background-image: url("./profiles/ironman.jpg");
+    background-size: contain;
+    background-position: center center;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    margin-bottom: 2vh;
+}
+
+.right {
+    width: 85%;
+    transform: scale(-1);
+}
+
+.prog-count {
+    width: 100%;
+    height: 1.5vh;
+    text-align: end;
+    line-height: 1vh;
+    color: rgb(255, 255, 255);
+    border-radius: 1px;
+    text-shadow: 2px 1px 1px black;
+    margin: 3px 1px;
+    background-image: linear-gradient(90deg, transparent, #ffffff00 50%, #fff 50%, #fff 100%), linear-gradient(90deg, #ffffff00, #ffffff00, #ffffff00, #ffffff00, #ffffff00);
+    background-size: 7px 1px, 1% 10px;
+}
+
+#armor {
+    background-image: linear-gradient(90deg, transparent, #ffffff00 50%, #0044ff 50%, #0044ff 100%), linear-gradient(90deg, #ffffff00, #ffffff00, #ffffff00, #ffffff00, #ffffff00);
+}
+
+#health {
+    background-image: linear-gradient(90deg, transparent, #ffffff00 50%, #ff0000 50%, #ff0000 100%), linear-gradient(90deg, #ffffff00, #ffffff00, #ffffff00, #ffffff00, #ffffff00);
+}
+
+.menu {
+    width: 70%;
+    height: 45vh;
+    background: linear-gradient(0deg, rgb(3 3 4) 0%, rgb(45 42 42 / 63%) 100%);
+    border: 0.2vh solid var(--DefualtHeroColor);
+    border-radius: 20px;
+    border-top: 0;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
+.options {
+    display: flex;
+    height: 98%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding: 0vh 2vh;
+    padding-bottom: 0vh;
+    overflow: auto;
+}
+
+.sub-menu {
+    height: inherit;
+    display: none;
+}
+
+#mainMenu {
+    height: inherit;
+}
+
+.option {
+    color: white;
+    text-align: center;
+    padding: 1vh;
+    width: 90%;
+    margin: 0.2vh 0vh;
+    font-size: 1.5vh;
+    background: radial-gradient(202% 126.74% at 56% 51.16%, rgb(183 183 183 / 29%) 0%, rgba(92, 65, 191, 0) 93.98%);
+    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 30%);
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.soption {
+    color: white;
+    text-align: center;
+    padding: 1vh;
+    width: 90%;
+    margin: 0.2vh 0vh;
+    font-size: 1.5vh;
+    background: radial-gradient(202% 126.74% at 56% 51.16%, rgb(183 183 183 / 29%) 0%, rgba(92, 65, 191, 0) 93.98%);
+    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 30%);
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.highlight {
+    background: radial-gradient(202% 126.74% at 56% 51.16%, var(--DefualtHeroColor) 0%, rgb(0 0 0 / 0%) 93.98%);
+    border-image: radial-gradient(409.97% 55.14% at 50% 50%, #ffffff 0%, rgba(33, 255, 192, 0) 100%) 1 / 1 / 0 stretch;
+}
+
+.svg-bg {
+    position: absolute;
+    width: 40vh;
+    top: -3.5vh;
+}
+
+.path {
+    stroke: var(--DefualtHeroColor);
+    stop-color: var(--DefualtHeroColor);
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+@keyframes slide-in-blurred-right {
+    0% {
+        -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+                transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+        -webkit-filter: blur(40px);
+                filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+                transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        opacity: 1;
+    }
+}
